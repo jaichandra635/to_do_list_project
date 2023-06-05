@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>My To-Do List</h1>
+  </header>
+  <main>
+    <form id="task-form">
+      <input type="text" id="task-title" placeholder="Task title" required>
+      <textarea id="task-description" placeholder="Task description"></textarea>
+      <select id="task-priority">
+        <option value="high">High Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="low">Low Priority</option>
+      </select>
+      <input type="date" id="task-due-date">
+      <button type="submit">Add Task</button>
+    </form>
+    <ul id="task-list">
+      <!-- Tasks will be dynamically added here -->
+    </ul>
+  </main>
+
+  <!-- Task template -->
+  <template id="task-template">
+    <li>
+      <input type="checkbox">
+      <span class="task-title"></span>
+      <span class="task-description"></span>
+      <span class="task-priority"></span>
+      <span class="task-due-date"></span>
+      <button class="delete-btn">Delete</button>
+    </li>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
